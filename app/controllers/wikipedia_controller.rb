@@ -12,7 +12,7 @@ class WikipediaController < ConnectController
     }
 
     res = getRequest(API_URL,params)
-    return res;
+    return res
 
   end
 

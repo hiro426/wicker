@@ -1,5 +1,10 @@
 class PageController < WikipediaController
 
+  def index
+    @movie_id = 'Y5N-LuqBpPo'
+    render 'page/index'
+  end
+
   def list
     res = getContents('WBC')
 
@@ -9,7 +14,7 @@ class PageController < WikipediaController
 
     # print(res.body)
     # render :text => res.body
-    returnResponse res.body
+    render :text => res.body.to_s
   end
 
 end
